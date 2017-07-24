@@ -3,13 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-
+/// <summary>
+/// Sample application that uses the Verbot 5 Library.
+/// </summary>
 public class Exemple2 : ScriptTemplateForUI
 {
+
+    private VerbotScriptTemplate verbot = new VerbotScriptTemplate();
+
     // Use this for initialization
     void Start()
     {
         chatTextUI.text = "";
+        verbot.StartVerbot();
+        verbot.LoadKnowledgeBase("Verbots", "julia.vkb");
+        //
+       
     }
 
     // Update is called once per frame
@@ -23,7 +32,7 @@ public class Exemple2 : ScriptTemplateForUI
     /// </summary>
     public void SendMessageUI()
     {
-        SendMessageUI("?????");
+        SendMessageUI(verbot.getReply(userInput.text));
     }
 
 

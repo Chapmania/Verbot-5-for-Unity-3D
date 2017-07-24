@@ -8,7 +8,6 @@ public class ScriptTemplateForUI : MonoBehaviour {
 
     public Text chatTextUI;
     public InputField userInput;
-
 	
 	// Update is called once per frame
 	void Update () {
@@ -25,8 +24,6 @@ public class ScriptTemplateForUI : MonoBehaviour {
         chatTextUI.text += string.Format("<b>User</b>: {0}\n<b>Bot</b>: {1}\n\n", userInput.text, botOutput);
         userInput.text = "";
     }
-
-
 
     public void GoToMainMenu()
     {

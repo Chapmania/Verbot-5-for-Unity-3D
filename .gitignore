@@ -1,6 +1,7 @@
 syntax: glob
 Library
 Temp
+
 *.pidb
 *.sln
 *.userprefs
@@ -9,3 +10,5 @@ Temp
 *.sln
 *.csproj
 *.suo
+Verbot 5 for Unity 3D/Assets/Plugins/
+Verbot 5 for Unity 3D/Assets/StreamingAssets/
