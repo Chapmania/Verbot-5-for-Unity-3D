@@ -26,4 +26,11 @@ public class ScriptTemplateForUI : MonoBehaviour {
         userInput.text = "";
     }
 
+
+
+    public void GoToMainMenu()
+    {
+        MainMenu.GoToMainMenu();
+    }
+
 }
