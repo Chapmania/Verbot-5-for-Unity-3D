@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,10 +25,39 @@ public class VerbotScriptTemplate
         Debug.Log("Verbot initialized");
     }
 
-    # region Load Knowledge Base
+    #region Useful
 
     /// <summary>
-    /// Load the knowledge base *.VKB
+    /// Save current knowledge base to a compiled knowledge file *.CKB
+    /// You must call the "LoadKnowledgBase()" function first
+    /// </summary>
+    /// <param name="path">StreamingAssets/.../....</param>
+    /// <param name="file">Untitled.ckb</param>
+    public void SaveCurrentCompiledKnowledgeBase(string path, string file)
+    {
+        try
+        {
+            string sPath = System.IO.Path.Combine(Application.streamingAssetsPath, path);
+            string pathToSaveFile = System.IO.Path.Combine(sPath, file);
+
+            CompiledKnowledgeBase ckb = verbot.CompileKnowledgeBase(kb, kbi);
+
+            verbot.SaveCompiledKnowledgeBase(ckb, pathToSaveFile);
+            Debug.Log(string.Format("{0} file saved in: {1}", file, pathToSaveFile));
+        }
+        catch (Exception e)
+        {
+            Debug.LogWarning(e.ToString());
+        }
+    }
+
+    #endregion
+
+
+    #region Load Knowledge Base
+
+    /// <summary>
+    /// Load the Verbot knowledge base *.VKB
     /// </summary>
     /// <param name="path">StreamingAssets/.../verbot</param>
     /// <param name="file">Untitled.vkb</param>
