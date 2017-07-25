@@ -31,4 +31,9 @@ public class MainMenu : MonoBehaviour {
         SceneManager.LoadScene("Example3");
     }
 
+    public void GoToExemple4()
+    {
+        SceneManager.LoadScene("Example4");
+    }
+
 }

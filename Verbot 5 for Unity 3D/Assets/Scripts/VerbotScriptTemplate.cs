@@ -78,14 +78,17 @@ public class VerbotScriptTemplate
         this.state.CurrentKBs.Add(pathToFile);
     }
 
-    /*
-    public void LoadCompiledKnowledgeBase(string path)
+    
+    public void LoadCompiledKnowledgeBase(string path, string file)
     {
-        this.verbot.AddCompiledKnowledgeBase(path);
+        string sPath = System.IO.Path.Combine(Application.streamingAssetsPath, path);
+        string pathToFile = System.IO.Path.Combine(sPath, file);
+
+        this.verbot.AddCompiledKnowledgeBase(pathToFile);
         this.state.CurrentKBs.Clear();
-        this.state.CurrentKBs.Add(path);
+        this.state.CurrentKBs.Add(pathToFile);
     }
-    */
+    
     #endregion
 
     public string getReply(string stInput)
