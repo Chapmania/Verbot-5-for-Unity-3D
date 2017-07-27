@@ -51,6 +51,35 @@ public class VerbotScriptTemplate
         }
     }
 
+    /// <summary>
+    /// Saves the last conversation variables. (Name, etc...)
+    /// </summary>
+    /// <param name="path">StreamingAssets/.../verbot</param>
+    /// <param name="file">nameBIN</param>
+    public void SaveVars(string path, string file)
+    {
+        string sPath = System.IO.Path.Combine(Application.streamingAssetsPath, path);
+        string pathToFile = System.IO.Path.Combine(sPath, file);
+
+        this.state.SaveVars(pathToFile);
+        Debug.Log("Variables saved");
+    }
+
+
+    /// <summary>
+    /// Loads the last conversation variables. (Name, etc...)
+    /// </summary>
+    /// <param name="path">StreamingAssets/.../verbot</param>
+    /// <param name="file">nameBIN</param>
+    public void LoadVars(string path, string file)
+    {
+        string sPath = System.IO.Path.Combine(Application.streamingAssetsPath, path);
+        string pathToFile = System.IO.Path.Combine(sPath, file);
+
+        this.state.LoadVars(pathToFile);
+        Debug.Log("Variables loaded");
+    }
+
     #endregion
 
 
@@ -78,7 +107,11 @@ public class VerbotScriptTemplate
         this.state.CurrentKBs.Add(pathToFile);
     }
 
-    
+    /// <summary>
+    /// Load the compiled Verbot knowledge base *.CKB
+    /// </summary>
+    /// <param name="path">StreamingAssets/.../verbot</param>
+    /// <param name="file">Untitled.ckb</param>
     public void LoadCompiledKnowledgeBase(string path, string file)
     {
         string sPath = System.IO.Path.Combine(Application.streamingAssetsPath, path);

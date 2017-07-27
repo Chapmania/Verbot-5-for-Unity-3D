@@ -17,8 +17,9 @@ public class Exemple2 : ScriptTemplateForUI
         chatTextUI.text = "";
         verbot.StartVerbot();
         verbot.LoadKnowledgeBase("Verbots", "julia.vkb");
-        //
-       
+
+        //Load Brain/memoirs
+        verbot.LoadVars("Verbots", "memoirsBIN");
     }
 
     // Update is called once per frame
@@ -26,6 +27,13 @@ public class Exemple2 : ScriptTemplateForUI
     {
          
     }
+
+    void OnDisable()
+    {
+        //Save Brain/memoirs
+        verbot.SaveVars("Verbots", "memoirsBIN");
+    }
+
 
     /// <summary>
     /// /// Send a message to UI
