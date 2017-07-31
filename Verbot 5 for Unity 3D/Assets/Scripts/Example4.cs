@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using System.IO;
+
 public class Example4 : ScriptTemplateForUI
 {
     private VerbotScriptTemplate verbot = new VerbotScriptTemplate();
@@ -11,10 +13,13 @@ public class Example4 : ScriptTemplateForUI
     {
         chatTextUI.text = "";
         verbot.StartVerbot();
-        verbot.LoadCompiledKnowledgeBase("Verbots", "MyFileNameCKB.ckb");
+        string[] PathToCKBs = new string[] {
+            Path.Combine(Application.streamingAssetsPath,@"Verbots\MyFileNameCKB.ckb")
+        };
+        verbot.LoadCompiledKnowledgeBase(PathToCKBs);
 
         //Load Brain/memoirs
-        verbot.LoadVars("Verbots", "memoirsBIN");
+        verbot.LoadVars("Verbots", "memoirs.dat");
     }
 
     // Update is called once per frame
@@ -26,7 +31,7 @@ public class Example4 : ScriptTemplateForUI
     void OnDisable()
     {
         //Save Brain/memoirs
-        verbot.SaveVars("Verbots", "memoirsBIN");
+        verbot.SaveVars("Verbots", "memoirs.dat");
     }
 
 

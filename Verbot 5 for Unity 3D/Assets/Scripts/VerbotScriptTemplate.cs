@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using System.IO;
 using Conversive.Verbot5;
 
 /// <summary>
@@ -27,9 +28,22 @@ public class VerbotScriptTemplate
 
     #region Useful
 
+
+    bool FileExist(string path)
+    {
+        bool fileExist = File.Exists(path);
+
+        if (fileExist == false) {
+            Debug.LogError("File does not exist: "+ path);
+        }
+
+        return fileExist;
+    }
+
     /// <summary>
     /// Save current knowledge base to a compiled knowledge file *.CKB
-    /// You must call the "LoadKnowledgBase()" function first
+    /// You must call the "LoadKnowledgBase()" function first.
+    /// Remember that you can only compile one * .VKB at a time.
     /// </summary>
     /// <param name="path">StreamingAssets/.../....</param>
     /// <param name="file">Untitled.ckb</param>
@@ -88,38 +102,50 @@ public class VerbotScriptTemplate
     /// <summary>
     /// Load the Verbot knowledge base *.VKB
     /// </summary>
-    /// <param name="path">StreamingAssets/.../verbot</param>
-    /// <param name="file">Untitled.vkb</param>
-    public void LoadKnowledgeBase(string path, string file)
+    /// <param name="paths">StreamingAssets/.../...</param>
+    public void LoadKnowledgeBase(string [] paths)
     {
-        string sPath = System.IO.Path.Combine(Application.streamingAssetsPath, path);
-        string pathToFile = System.IO.Path.Combine(sPath, file);
-
-        kb = verbot.LoadKnowledgeBase(pathToFile);
-
-        // load the knowledgebase item
-        kbi.Filename = file;
-        kbi.Fullpath = sPath + @"\";
-
-        // set the knowledge base for verbot
-        verbot.AddKnowledgeBase(kb, kbi);
+        // Clears the values of the variables.
         this.state.CurrentKBs.Clear();
-        this.state.CurrentKBs.Add(pathToFile);
+
+        // Get all paths in the array.
+        foreach (string path in paths)
+        {
+            if (FileExist(path) == true)
+            {
+                //Load a knowledge base.
+                kb = verbot.LoadKnowledgeBase(path);
+
+                //Load the knowledgebase item.
+                kbi.Filename = Path.GetFileName(path);
+                kbi.Fullpath = Path.GetDirectoryName(path) + @"\";
+
+                //Set the knowledge base for verbot.
+                verbot.AddKnowledgeBase(kb, kbi);
+                this.state.CurrentKBs.Add(path);
+            }
+        }
     }
 
     /// <summary>
     /// Load the compiled Verbot knowledge base *.CKB
     /// </summary>
-    /// <param name="path">StreamingAssets/.../verbot</param>
-    /// <param name="file">Untitled.ckb</param>
-    public void LoadCompiledKnowledgeBase(string path, string file)
+    /// <param name="paths">StreamingAssets/.../...</param>
+    public void LoadCompiledKnowledgeBase(string[] paths)
     {
-        string sPath = System.IO.Path.Combine(Application.streamingAssetsPath, path);
-        string pathToFile = System.IO.Path.Combine(sPath, file);
-
-        this.verbot.AddCompiledKnowledgeBase(pathToFile);
+        // Clears the values of the variables.
         this.state.CurrentKBs.Clear();
-        this.state.CurrentKBs.Add(pathToFile);
+
+        // Get all paths in the array.
+        foreach (string path in paths)
+        {
+            if (FileExist(path) == true)
+            {
+                //Set the knowledge base for verbot.
+                this.verbot.AddCompiledKnowledgeBase(path);
+                this.state.CurrentKBs.Add(path);
+            }
+        }
     }
     
     #endregion

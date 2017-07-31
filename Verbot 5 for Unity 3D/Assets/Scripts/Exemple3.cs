@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using System.IO;
 using UnityEngine.UI;
 using Conversive.Verbot5;
 
@@ -18,7 +19,12 @@ public class Exemple3 : MonoBehaviour {
 	void Start () {
         inputPath.text = "MyFileNameCKB";
         verbot.StartVerbot();
-        verbot.LoadKnowledgeBase("Verbots", "julia.vkb");
+
+        //Remember that you can only compile one *.VKB at a time.
+        string[] PathToVKB = new string[] {
+            Path.Combine(Application.streamingAssetsPath,@"Verbots\julia.vkb")
+        };
+        verbot.LoadKnowledgeBase(PathToVKB);
     }
 	
 	// Update is called once per frame
@@ -26,6 +32,9 @@ public class Exemple3 : MonoBehaviour {
 		
 	}
 
+    /// <summary>
+    /// Remember that you can only compile one *.VKB at a time.
+    /// </summary>
     public void SaveCompiledKnowledgeBase()
     {
         verbot.SaveCurrentCompiledKnowledgeBase("Verbots", string.Format("{0}.ckb", inputPath.text));
