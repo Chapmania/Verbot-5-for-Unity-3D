@@ -40,7 +40,10 @@ public class Example4 : ScriptTemplateForUI
     /// </summary>
     public void SendMessageUI()
     {
-        SendMessageUI(verbot.getReply(userInput.text));
+        if (string.IsNullOrEmpty(userInput.text) == false)
+        {
+            SendMessageUI(verbot.GetReply(userInput.text));
+        }
     }
 
 }

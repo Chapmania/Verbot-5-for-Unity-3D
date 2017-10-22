@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<KnowledgeBase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Rules>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>A40B36A49BFC3240</Id>
+          <Text>What is #Name's phone number?</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>A40B36A49BFC3240</Id>
+          <Text>#Name's phone number is #Number.</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>E012193E622D08D8</Id>
+      <Name>Get Phone Number</Name>
+    </Rule>
+  </Rules>
+  <ResourceFiles>
+    <ResourceFile xsi:type="ResourceFile">
+      <Filename>phone_book_sample.csv</Filename>
+      <Filetype>TemplateDataFile</Filetype>
+    </ResourceFile>
+  </ResourceFiles>
+  <Info>
+    <Author />
+    <Copyright />
+    <License />
+    <AuthorWebsite />
+    <CreationDate>2004-06-24T13:20:08.6981696-07:00</CreationDate>
+    <LastUpdateDate>2004-06-24T15:50:14.3076000-07:00</LastUpdateDate>
+    <Rating>
+      <Rating>Unknown</Rating>
+      <Language>false</Language>
+      <Sexual>false</Sexual>
+      <Violence>false</Violence>
+      <Other>false</Other>
+      <Description />
+    </Rating>
+    <Category>Other</Category>
+    <Language>English</Language>
+    <Comment>Describe your KnowledgeBase here</Comment>
+  </Info>
+  <Version>1.0</Version>
+  <Build>4</Build>
+</KnowledgeBase>

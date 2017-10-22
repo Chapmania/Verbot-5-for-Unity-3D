@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<KnowledgeBase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Rules>
+    <Rule>
+      <Inputs>
+        <Input>
+          <Id>5765EF1A3AAF816A</Id>
+          <Text>Hello</Text>
+          <Condition />
+        </Input>
+        <Input>
+          <Id>C11AA3289CB9960</Id>
+          <Text>Hi</Text>
+          <Condition />
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output>
+          <Id>915C2D2EDBD50916</Id>
+          <Text>Hello, World</Text>
+          <Condition />
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>42F64730F9C4F18</Id>
+    </Rule>
+  </Rules>
+  <ResourceFiles />
+  <Info>
+    <Author />
+    <Copyright />
+    <License />
+    <AuthorWebsite />
+    <CreationDate>2017-10-22T16:27:36.915638-02:00</CreationDate>
+    <LastUpdateDate>2017-10-22T16:27:36.915638-02:00</LastUpdateDate>
+    <Rating>
+      <Rating>Unknown</Rating>
+      <Language>false</Language>
+      <Sexual>false</Sexual>
+      <Violence>false</Violence>
+      <Other>false</Other>
+      <Description />
+    </Rating>
+    <Category>Other</Category>
+    <Language>English</Language>
+    <Comment />
+  </Info>
+  <Version>1.0</Version>
+  <Build>0</Build>
+</KnowledgeBase>

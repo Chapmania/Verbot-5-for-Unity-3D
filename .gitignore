@@ -10,5 +10,8 @@ Temp
 *.sln
 *.csproj
 *.suo
-Verbot 5 for Unity 3D/Assets/Plugins/
-Verbot 5 for Unity 3D/Assets/StreamingAssets/
+
+Verbot 5 for Unity 3D/Assets/StreamingAssets/Verbots/logs/
+Verbot 5 for Unity 3D/Assets/StreamingAssets/Verbots/memoirs.dat
+Verbot 5 for Unity 3D/Assets/StreamingAssets/Verbots/memoirs.dat.meta
+Verbot 5 for Unity 3D/Assets/StreamingAssets/Verbots/logs.meta

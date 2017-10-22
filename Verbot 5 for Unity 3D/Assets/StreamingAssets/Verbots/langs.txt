@@ -1,0 +1,31 @@
+0401 Arabic
+042D Basque
+0804 Chinese (Simplified)
+0404 Chinese (Traditional)
+041A Croatian
+0405 Czech
+0406 Danish
+0413 Dutch
+0809 English (British)
+0409 English (US)
+040B Finnish
+040C French
+0407 German
+0408 Greek
+040D Hebrew
+040E Hungarian
+0410 Italian
+0411 Japanese
+0412 Korean
+0414 Norwegian
+0415 Polish
+0416 Portuguese (Brazil)
+0816 Portuguese (Portugal)
+0418 Romanian
+0419 Russian
+041B Slovakian
+0424 Slovenian
+0C0A Spanish
+041D Swedish
+041E Thai
+041F Turkish

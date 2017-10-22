@@ -150,7 +150,7 @@ public class VerbotScriptTemplate
     
     #endregion
 
-    public string getReply(string stInput)
+    public string GetReply(string stInput)
     {
         string output = "";       
         Reply reply = this.verbot.GetReply(stInput, this.state);

@@ -1,0 +1,815 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<KnowledgeBase xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Rules>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>AD98903A90B2572E</Id>
+          <Text>next time say [newthing]</Text>
+        </Input>
+        <Input xsi:type="Input">
+          <Id>4FB7B574F6E4C9B6</Id>
+          <Text>You should have said [newthing]</Text>
+        </Input>
+        <Input xsi:type="Input">
+          <Id>3CB25BFAA2719EF6</Id>
+          <Text>why didn't you say [newthing]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>AD98903A90B2572E</Id>
+          <Text>Ok, next time, when you say "[_lastinput]", I'll say: [newthing].
+&lt;learn
+#name: [_lastinput]
+#input: [_lastinput]
+#output: [newthing]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>927C6194C312FF1E</Id>
+      <Name>You should have said</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>60A2C95AB1924ACE</Id>
+          <Text>lastinput</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>60A2C95AB1924ACE</Id>
+          <Text>the last thing you said was "[_lastinput]"</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>7B20775AA5AD499C</Id>
+      <Name>lastinput</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>A89063BE7CAC1284</Id>
+          <Text>(rem) a [subject] is an [desc]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>A89063BE7CAC1284</Id>
+          <Text>Got it. &lt;learn #input:(What is) a [subject] #output:A [subject] is an [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>B3A8BAD8CB9C4D04</Id>
+      <Name>a BLANK is an BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>F6F02CCEB31D0E5E</Id>
+          <Text>(rem) [subject] is an [descrip]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>F6F02CCEB31D0E5E</Id>
+          <Text>Good to know. I'll remember that.
+&lt;learn
+#name:what is [subject]
+#input:(What is) [subject]
+#input:(Who is) [subject]
+#output:[subject] is an [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>E7981F48ACC54FF0</Id>
+      <Name>BLANK is an BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>81665662EE69069A</Id>
+          <Text>My [blank]'s name is [blanksname]</Text>
+        </Input>
+        <Input xsi:type="Input">
+          <Id>2672CEA22BD8CEAA</Id>
+          <Text>[blanksname] is the name of my [blank]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>81665662EE69069A</Id>
+          <Text>I see. Your [blank]'s name is [blanksname]. 
+&lt;learn
+#name: What is my [blank]'s name
+#input: (What is) my [blank]'s name
+#output: Your [blank]'s name is a [blanksname].&gt;
+&lt;learn
+#name: My [blank]'s name is [blanksname]
+#input: My [blank]'s name is [blanksname]
+#input: [blanksname] is my [blank]
+#output: Yes I know. You already told me your [blank]'s name is [blanksname].&gt;
+&lt;learn
+#name: (Who is) [blanksname]
+#input: (Who is) [blanksname]
+#input: (Who is) my [blank]
+#output: You told me [blanksname] is your [blank].&gt;
+&lt;learn
+#name: (What is) the name of my [blank]
+#input: (What is) the name of my [blank]
+#output: You told me the name of your [blank] is [blanksname].&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>B2F8DA76214F19BC</Id>
+      <Name>define name: My BLANK's name is BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>3F80117C597535F0</Id>
+          <Text>(rem) an [subject] is an [desc]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>3F80117C597535F0</Id>
+          <Text>I'll remember that. &lt;learn #input:(What is) a [subject] #output:An [subject] is an [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>DDF2CEC27F0852A</Id>
+      <Name>an BLANK is an BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>4946A7E419B2E642</Id>
+          <Text>(rem) an [subject] is a [desc]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>4946A7E419B2E642</Id>
+          <Text>Ok, I'll remember that for you. &lt;learn #input:(What is) a [subject] #output:An [subject] is a [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>1C7ACF42A0F90990</Id>
+      <Name>an BLANK is a BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>12C42298AB08F3A2</Id>
+          <Text>(rem) a [subject] is a [desc]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>12C42298AB08F3A2</Id>
+          <Text>I'll be sure to remember that.&lt;learn #input:(What is) a [subject] #output:A [subject] is a [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>E6BBFCE68A79F746</Id>
+      <Name>a BLANK is a BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>5229556A4C41FE02</Id>
+          <Text>(rem) [subject] is a [desc]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>5229556A4C41FE02</Id>
+          <Text>Great to know that [subject] is a [desc], I'll be sure to make a note of it.
+&lt;learn
+#name:what is [subject]
+#input:(What is) [subject]
+#input:(Who is) [subject]
+#output:[subject] is a [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>10E04720312F5A</Id>
+      <Name>BLANK is a BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>9C71B9E1FD6EB20</Id>
+          <Text>(rem) a [subject] (is not) a [desc]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>9C71B9E1FD6EB20</Id>
+          <Text>I'll be sure to remember that.&lt;learn #input:(What is) a [subject] #output:A [subject] is not a [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>9F3DEEE823392004</Id>
+      <Name>a BLANK is not a BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>FC623788E8448D98</Id>
+          <Text>(rem) a [subject] (is not) an [desc]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>FC623788E8448D98</Id>
+          <Text>Got it. &lt;learn #input:(What is) a [subject] #output:A [subject] is not an [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>190E2A06D9C72786</Id>
+      <Name>a BLANK is not an BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>CD646D2841E3520</Id>
+          <Text>(rem) an [subject] (is not) a [desc]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>CD646D2841E3520</Id>
+          <Text>Ok, I'll remember that for you. &lt;learn #input:(What is) a [subject] #output:An [subject] is not a [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>DFC0080627DFF548</Id>
+      <Name>an BLANK is not a BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>CD646D2841E3520</Id>
+          <Text>(rem) an [subject] (is not) an [desc]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>CD646D2841E3520</Id>
+          <Text>I'll remember that. &lt;learn #input:(What is) a [subject] #output:An [subject] is not an [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>52E9D33ACEAFB530</Id>
+      <Name>an BLANK is not an BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>CD646D2841E3520</Id>
+          <Text>(rem) [subject] (is not) a [desc]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>CD646D2841E3520</Id>
+          <Text>Great to know that [subject] is not a [desc], I'll be sure to make a note of it.
+&lt;learn
+#name:what is [subject]
+#input:(What is) [subject]
+#input:(Who is) [subject]
+#output:[subject] is not a [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>82FC7FA266D4E92</Id>
+      <Name>BLANK is not a BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>CD646D2841E3520</Id>
+          <Text>(rem) [subject] (is not) an [descrip]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>CD646D2841E3520</Id>
+          <Text>Good to know. I'll remember that.
+&lt;learn
+#name:what is [subject]
+#input:(What is) [subject]
+#input:(Who is) [subject]
+#output:[subject] is not an [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>228B81685D6C81E2</Id>
+      <Name>BLANK is not an BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>9128AAE4488D8374</Id>
+          <Text>Then say [newthing_child]</Text>
+        </Input>
+        <Input xsi:type="Input">
+          <Id>A78EFDDE6F48790C</Id>
+          <Text>After that say [newthing_child]</Text>
+        </Input>
+        <Input xsi:type="Input">
+          <Id>6E9A85FC65D8D31A</Id>
+          <Text>Next say [newthing_child]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>27EA65A456310F34</Id>
+          <Text>Ok, after that I'll say: [newthing_child]
+&lt;learn
+#childof: [_lastfired]
+#input: *
+#output: [newthing_child]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>A64C220CA70264BA</Id>
+      <Name>Then say [newthing_child]</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>20879B4CCF0AFBFE</Id>
+          <Text>lastfired</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>20879B4CCF0AFBFE</Id>
+          <Text>The id of the last rule fired was: [_lastfired]</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>67FDDCF2E52475FC</Id>
+      <Name>lastfired</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>C7FCB844E2E7253E</Id>
+          <Text>Then when say [new_input] say [new_output]</Text>
+        </Input>
+        <Input xsi:type="Input">
+          <Id>FA972E825430D5C2</Id>
+          <Text>Then if say [new_input] say [new_output]</Text>
+        </Input>
+        <Input xsi:type="Input">
+          <Id>929D1E4EAC51768A</Id>
+          <Text>Then if say [new_input] then say [new_output]</Text>
+        </Input>
+        <Input xsi:type="Input">
+          <Id>CA1278C4F7F24C00</Id>
+          <Text>Then when say [new_input] then say [new_output]</Text>
+        </Input>
+        <Input xsi:type="Input">
+          <Id>DE5D0BA4ACAA1D30</Id>
+          <Text>Then if say [new_input] you say [new_output]</Text>
+        </Input>
+        <Input xsi:type="Input">
+          <Id>67108A16BB30C32</Id>
+          <Text>Then when say [new_input] you say [new_output]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>2C12589A2241BC16</Id>
+          <Text>Ok, then when someone says: [new_input], I'll say: [new_output]
+&lt;learn
+#childof: [_lastfired]
+#input: [new_input]
+#output: [new_output]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>2A4B59A7B4487D0</Id>
+      <Name>Then when I say [new_input] say [new_output]</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>934F321E136A8280</Id>
+          <Text>When say [new_input] say [new_output]</Text>
+        </Input>
+        <Input xsi:type="Input">
+          <Id>20C5B7E449F5C87E</Id>
+          <Text>If say [new_input] say [new_output]</Text>
+        </Input>
+        <Input xsi:type="Input">
+          <Id>5F05294A3C4B8EE0</Id>
+          <Text>If say [new_input] you say [new_output]</Text>
+        </Input>
+        <Input xsi:type="Input">
+          <Id>7DC106EC86918C5E</Id>
+          <Text>When say [new_input] you say [new_output]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>F836C0DC5215D7D4</Id>
+          <Text>Ok, when someone says: [new_input], I'll say: [new_output]
+&lt;learn
+#input: [new_input]
+#output: [new_output]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>35C479B8F5706540</Id>
+      <Name>When I say [new_input] say [new_output]</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>D1768B921DEE8368</Id>
+          <Text>(rem) [blankname] is my [blankdescrip]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>D1768B921DEE8368</Id>
+          <Text>[blankname] is your [blankdescrip], Sounds like something I should remember.
+&lt;learn
+#name: [blankname] is my [blankdescrip]
+#input:(who is) my [blankdescrip]
+#input:(what is) my [blankdescrip]
+#input:(who is) [blankname]
+#input: (what is) my [blankdescrip]'s name
+#output: I believe you said [blankname] was your [blankdescrip]
+&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>CDDE08024D26BAB6</Id>
+      <Name>BLANK is my BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>5F7C9AC6B90AB492</Id>
+          <Text>[blanksname] is [age] old</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>5F7C9AC6B90AB492</Id>
+          <Text>[blanksname] is [age] old? That sounds like a good age to be.
+&lt;learn
+#name: how old is [blanksname]
+#input: how old is [blanksname]
+#output: You told me [blanksname] is [age] old.&gt;
+&lt;learn
+#name: [blanksname] is [age] old
+#input: [blanksname] is [age] old
+#output: That is correct. [blanksname] is [age] old according to you [name:Friend]&gt;
+&lt;learn
+#name: is [blanksname] [age] old
+#input: is [blanksname] [age] old
+#output: That is correct. According to you [blanksname] is [age] old.&gt;
+&lt;learn
+#name: is [blanksname] old
+#input: is [blanksname] old
+#output: According to you [blanksname] is [age] old.&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>3CB972726823C29E</Id>
+      <Name>define name: BLANK is BLANK years old</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>1BB91530CF55BDE</Id>
+          <Text>My [blanksname] is [age] old</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>1BB91530CF55BDE</Id>
+          <Text>Your [blanksname] is [age] old? That sounds like a good age to be.
+&lt;learn
+#name: how old is my [blanksname]
+#input: how old is my [blanksname]
+#output: You told me your [blanksname] is [age] old.&gt;
+&lt;learn
+#name: my [blanksname] is [age] old
+#input: my [blanksname] is [age] old
+#output: That is correct. [blanksname] is [age] old according to you [name:Friend]&gt;
+&lt;learn
+#name: is my [blanksname] [age] old
+#input: is my [blanksname] [age] old
+#output: That is correct. According to you, your [blanksname] is [age] old.&gt;
+&lt;learn
+#name: is my [blanksname] old
+#input: is my [blanksname] old
+#output: According to you, your [blanksname] is [age] old.&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>21756F0A4109978A</Id>
+      <Name>define name: My BLANK is BLANK years old</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>AF255A08649A096A</Id>
+          <Text>(rem) [subject] is [desc]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>AF255A08649A096A</Id>
+          <Text>Great to know that [subject] is [desc], I'll be sure to make a note of it.
+&lt;learn
+#name:what is [subject]
+#input:(What is) [subject]
+#input:(Who is) [subject]
+#output:[subject] is [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>ADEE5D1EFB8A7156</Id>
+      <Name>BLANK is BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>ADEE5D1EFB8A7156</Id>
+          <Text>(rem) [subject] are a [desc]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>ADEE5D1EFB8A7156</Id>
+          <Text>Great to know that [subject] are a [desc], I'll be sure to make a note of it.
+&lt;learn
+#name:what are [subject]
+#input:who are [subject]
+#input:what are [subject]
+#output:[subject] are a [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>49233E34CB308AE2</Id>
+      <Name>BLANK are a BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>859EAE06C3357FEC</Id>
+          <Text>(rem) [subject] are [desc]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>859EAE06C3357FEC</Id>
+          <Text>Great to know that [subject] are [desc], I'll be sure to make a note of it.
+&lt;learn
+#name:what are [subject]
+#input:What are [subject]
+#input:Who are [subject]
+#output:[subject] are [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>CB925F4276593EF8</Id>
+      <Name>BLANK are BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>AF255A08649A096A</Id>
+          <Text>(rem) [subject] are an [descrip]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>AF255A08649A096A</Id>
+          <Text>Good to know. I'll remember that.
+&lt;learn
+#name:what are [subject]
+#input:What are [subject]
+#input:Who are [subject]
+#output:[subject] are an [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>96F86038A001B576</Id>
+      <Name>BLANK are an BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>AF255A08649A096A</Id>
+          <Text>(rem) [blankname] are my [blankdescrip]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>AF255A08649A096A</Id>
+          <Text>[blankname] are your [blankdescrip], Sounds like something I should remember.
+&lt;learn
+#name: [blankname] are my [blankdescrip]
+#input:who are my [blankdescrip]
+#input:what are my [blankdescrip]
+#input:who are [blankname]
+#input:what are my [blankdescrip]'s name
+#output: I believe you said [blankname] are your [blankdescrip]
+&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>C8A0A9BCE6F8157A</Id>
+      <Name>BLANK are my BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>AF255A08649A096A</Id>
+          <Text>(rem) [subject] (is not) [desc]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>AF255A08649A096A</Id>
+          <Text>Great to know that [subject] is not [desc], I'll be sure to make a note of it.
+&lt;learn
+#name:what is [subject]
+#input:(What is) [subject]
+#input:(Who is) [subject]
+#output:[subject] is not [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>F027D4CCB837FBD0</Id>
+      <Name>BLANK is not BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>ADEE5D1EFB8A7156</Id>
+          <Text>(rem) [subject] (are not) a [desc]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>ADEE5D1EFB8A7156</Id>
+          <Text>Great to know that [subject] are not a [desc], I'll be sure to make a note of it.
+&lt;learn
+#name:what are [subject]
+#input:What are [subject]
+#input:Who are [subject]
+#output:[subject] are not a [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>95E3B2FEC760133E</Id>
+      <Name>BLANK are not a BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>A4747732F23C5274</Id>
+          <Text>(rem) [subject] (are not) [desc]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>A4747732F23C5274</Id>
+          <Text>Great to know that [subject] are not [desc], I'll be sure to make a note of it.
+&lt;learn
+#name:what are [subject]
+#input:What are [subject]
+#input:Who are [subject]
+#output:[subject] are not [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>9A2F1F868E889012</Id>
+      <Name>BLANK are not BLANK</Name>
+    </Rule>
+    <Rule xsi:type="Rule">
+      <Inputs>
+        <Input xsi:type="Input">
+          <Id>AF255A08649A096A</Id>
+          <Text>(rem) [subject] (are not) an [descrip]</Text>
+        </Input>
+      </Inputs>
+      <Outputs>
+        <Output xsi:type="Output">
+          <Id>AF255A08649A096A</Id>
+          <Text>Good to know. I'll remember that.
+&lt;learn
+#name:what are [subject]
+#input:What are [subject]
+#input:Who are [subject]
+#output:[subject] are not an [desc]&gt;</Text>
+          <Cmd />
+        </Output>
+      </Outputs>
+      <Children />
+      <VirtualParents />
+      <Id>684149B078213476</Id>
+      <Name>BLANK are not an BLANK</Name>
+    </Rule>
+  </Rules>
+  <ResourceFiles>
+    <ResourceFile xsi:type="ResourceFile">
+      <Filename>Default.vsn</Filename>
+      <Filetype>SynonymFile</Filetype>
+    </ResourceFile>
+  </ResourceFiles>
+  <Info>
+    <Author>Conversive, Inc.</Author>
+    <Copyright>Public Domain</Copyright>
+    <License>Free</License>
+    <AuthorWebsite>http://www.verbots.com/</AuthorWebsite>
+    <CreationDate>2004-03-22T09:37:55.3593750-08:00</CreationDate>
+    <LastUpdateDate>2004-06-14T11:54:46.1250000-07:00</LastUpdateDate>
+    <Rating>
+      <Rating>Kids</Rating>
+      <Language>false</Language>
+      <Sexual>false</Sexual>
+      <Violence>false</Violence>
+      <Other>false</Other>
+      <Description>All Audiences</Description>
+    </Rating>
+    <Category>Personal_Assistant</Category>
+    <Language>English</Language>
+    <Comment>This is the Teacher KnowledgeBase
+It enables you to teach your verbot new things.</Comment>
+  </Info>
+  <Version>1.0</Version>
+  <Build>91</Build>
+</KnowledgeBase>

@@ -22,7 +22,7 @@ public class Exemple3 : MonoBehaviour {
 
         //Remember that you can only compile one *.VKB at a time.
         string[] PathToVKB = new string[] {
-            Path.Combine(Application.streamingAssetsPath,@"Verbots\julia.vkb")
+            Path.Combine(Application.streamingAssetsPath,@"Verbots\Sylvie.vkb")
         };
         verbot.LoadKnowledgeBase(PathToVKB);
     }

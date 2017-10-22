@@ -18,7 +18,7 @@ public class Exemple2 : ScriptTemplateForUI
         chatTextUI.text = "";
         verbot.StartVerbot();
         string[] PathToVKBs = new string[] {
-            Path.Combine(Application.streamingAssetsPath,@"Verbots\julia.vkb")
+            Path.Combine(Application.streamingAssetsPath,@"Verbots\Sylvie.vkb")
         };
         verbot.LoadKnowledgeBase(PathToVKBs);
 
@@ -44,7 +44,10 @@ public class Exemple2 : ScriptTemplateForUI
     /// </summary>
     public void SendMessageUI()
     {
-        SendMessageUI(verbot.getReply(userInput.text));
+        if (string.IsNullOrEmpty(userInput.text) == false)
+        {
+            SendMessageUI(verbot.GetReply(userInput.text));
+        }
     }
 
 
