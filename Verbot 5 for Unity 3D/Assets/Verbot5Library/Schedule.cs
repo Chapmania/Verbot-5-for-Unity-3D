@@ -84,7 +84,7 @@ namespace Verbot5Library
 
 		private void processLine(string stLine)
 		{
-			Regex linePattern = new Regex(@"(?<min>\S+)\s+(?<hr>\S+)\s+(?<dom>\S+)\s+(?<mon>\S+)\s+(?<dow>\S+)\s+(?<text>.+)", RegexOptions.Compiled | RegexOptions.IgnoreCase | RegexOptions.ExplicitCapture);
+			Regex linePattern = new Regex(@"(?<min>\S+)\s+(?<hr>\S+)\s+(?<dom>\S+)\s+(?<mon>\S+)\s+(?<dow>\S+)\s+(?<text>.+)", /*RegexOptions.Compiled |*/ RegexOptions.IgnoreCase | RegexOptions.ExplicitCapture);
 			Match match = linePattern.Match(stLine);
 			GroupCollection gc = match.Groups;
 			if(gc.Count == 7)

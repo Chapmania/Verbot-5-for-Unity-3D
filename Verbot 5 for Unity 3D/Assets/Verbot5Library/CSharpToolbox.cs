@@ -26,12 +26,12 @@
 using System;
 using System.Collections;
 using System.Text;
-using Microsoft.CSharp;
+//using Microsoft.CSharp;
 using System.CodeDom.Compiler;
 using System.Reflection;
 using System.IO;
 using System.Threading;
-using System.Windows.Forms;
+//using System.Windows.Forms;
 using System.Collections.Generic;
 
 namespace Conversive.Verbot5
@@ -166,6 +166,7 @@ namespace Conversive.Verbot5
 
 		public bool Compile()//true if successful
 		{
+            /*
 			bool success;
 			this.AssembleCode();//convert the data structures to this.code
 
@@ -207,6 +208,8 @@ namespace Conversive.Verbot5
 				}//foreach(CompilerError error in results.Errors)
 			}
 			return success;
+            */
+            return false;
 		}//Compile()
 
 		public bool ExecuteCondition(string id)

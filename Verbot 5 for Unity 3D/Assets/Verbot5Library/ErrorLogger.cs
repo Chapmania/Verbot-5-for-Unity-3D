@@ -56,12 +56,15 @@ namespace Conversive.Verbot5
 			string sSource = "Verbot5";
 			string sLog = "Application";
 			string sEvent = stErrorMessage;
-
+            /*
 			if (!System.Diagnostics.EventLog.SourceExists(sSource))
 				System.Diagnostics.EventLog.CreateEventSource(sSource,sLog);
 
 			System.Diagnostics.EventLog.WriteEntry(sSource, sEvent);
 			//System.Diagnostics.EventLog.WriteEntry(sSource, sEvent, EventLogEntryType.Warning, 234);
-		}
+		*/
+
+            UnityEngine.Debug.Log(string.Format("sSource: {0} \n\nsLog: {1} \n\nsEvent: {2}", sSource, sLog, sEvent));
+    }
 	}//class ErrorLogger
 }//namespace Conversive.Verbot5

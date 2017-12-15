@@ -872,7 +872,7 @@ namespace Conversive.Verbot5
 		}//FetchWebPage(string url)
 	}//class TextToolbox
 
-	public class SynonymNode : System.Windows.Forms.TreeNode, IComparable
+	public class SynonymNode : /*System.Windows.Forms.TreeNode,*/ IComparable
 	{
 		public string Name;
 		public string Id;
@@ -883,17 +883,18 @@ namespace Conversive.Verbot5
 		{
 			this.Id = id;
 			this.Name = name;
-			this.Text = name;
+			/*this.Text = name;
 			this.ImageIndex = 1;
-			this.SelectedImageIndex = 1;
+			this.SelectedImageIndex = 1;*/
 
 			this.MatchedPhrases = new List<string>();
 		}
 
 		public override string ToString()
 		{
-			return this.Text;
-		}
+            //return this.Text;
+            return Name;
+        }
 
 		public override bool Equals(Object other)
 		{

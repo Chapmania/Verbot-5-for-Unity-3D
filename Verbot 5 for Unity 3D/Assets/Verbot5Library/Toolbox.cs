@@ -24,7 +24,7 @@
 */
 
 using System;
-using System.Windows.Forms;
+//using System.Windows.Forms;
 
 
 namespace Conversive.Verbot5
@@ -43,7 +43,8 @@ namespace Conversive.Verbot5
 			}
 			catch
 			{
-				MessageBox.Show("Could not open default web browser.\r\nGo to: " + url);
+                //MessageBox.Show("Could not open default web browser.\r\nGo to: " + url);
+                UnityEngine.Debug.LogWarning("Could not open default web browser.\r\nGo to: " + url);
 			}
 		}//openWebPage(string url)
 
