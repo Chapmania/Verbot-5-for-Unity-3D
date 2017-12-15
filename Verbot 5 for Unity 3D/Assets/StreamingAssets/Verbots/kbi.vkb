@@ -4,19 +4,19 @@
     <Rule>
       <Inputs>
         <Input>
-          <Id>5765EF1A3AAF816A</Id>
+          <Id>BC64385E7EF16E4A</Id>
           <Text>Hello</Text>
           <Condition />
         </Input>
         <Input>
-          <Id>C11AA3289CB9960</Id>
+          <Id>325108283242CCEA</Id>
           <Text>Hi</Text>
           <Condition />
         </Input>
       </Inputs>
       <Outputs>
         <Output>
-          <Id>915C2D2EDBD50916</Id>
+          <Id>48654E08CA1EFC78</Id>
           <Text>Hello, World</Text>
           <Condition />
           <Cmd />
@@ -24,7 +24,7 @@
       </Outputs>
       <Children />
       <VirtualParents />
-      <Id>42F64730F9C4F18</Id>
+      <Id>B9735F0D88EED4</Id>
     </Rule>
   </Rules>
   <ResourceFiles />
@@ -33,8 +33,8 @@
     <Copyright />
     <License />
     <AuthorWebsite />
-    <CreationDate>2017-10-22T16:27:36.915638-02:00</CreationDate>
-    <LastUpdateDate>2017-10-22T16:27:36.915638-02:00</LastUpdateDate>
+    <CreationDate>2017-12-15T17:52:20.5768898-02:00</CreationDate>
+    <LastUpdateDate>2017-12-15T17:52:20.5768898-02:00</LastUpdateDate>
     <Rating>
       <Rating>Unknown</Rating>
       <Language>false</Language>
